@@ -1,0 +1,29 @@
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  margin: 10px;
+}
+
+[class*="col-"] {
+  flex: 100%;
+}
+@media only screen and (min-width: 713px) {
+  .row {
+    flex-direction: row;
+  }
+  .col-4 {
+    flex: 33.33%;
+  }
+  .col-5 {
+    flex: 41.66%;
+  }
+  .col-7 {
+    flex: 58.33%;
+  }
+  .col-8 {
+    flex: 66.66%;
+  }
+}

@@ -1,0 +1,39 @@
+.left-col {
+  img {
+    width: 100%;
+  }
+  span {
+    color: #757575;
+  }
+  li {
+    padding: 5px 0;
+    display: block;
+    svg {
+      margin-right: 12px;
+      color: #009688;
+    }
+  }
+}
+
+.portrait-container {
+  position: relative;
+  .my-name {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: whitesmoke;
+    font: {
+      size: 35px;
+      weight: 550;
+    }
+  }
+}
+
+.info-container {
+  @include border-bottom;
+  padding-bottom: 15px;
+}
+
+.container > div {
+  margin: 20px 0 ;
+}

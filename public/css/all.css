@@ -1,0 +1,105 @@
+@charset "UTF-8";
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 整個頁面都使用的通用樣式(沒有一個固定的分類) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "標楷體", sans-serif;
+}
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  margin: 10px;
+}
+
+[class*=col-] {
+  flex: 100%;
+}
+
+@media only screen and (min-width: 713px) {
+  .row {
+    flex-direction: row;
+  }
+  .col-4 {
+    flex: 33.33%;
+  }
+  .col-5 {
+    flex: 41.66%;
+  }
+  .col-7 {
+    flex: 58.33%;
+  }
+  .col-8 {
+    flex: 66.66%;
+  }
+}
+.left-col img {
+  width: 100%;
+}
+.left-col span {
+  color: #757575;
+}
+.left-col li {
+  padding: 5px 0;
+  display: block;
+}
+.left-col li svg {
+  margin-right: 12px;
+  color: #009688;
+}
+
+.portrait-container {
+  position: relative;
+}
+.portrait-container .my-name {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: whitesmoke;
+  font-size: 35px;
+  font-weight: 550;
+}
+
+.info-container {
+  border-bottom: 1px solid #d2cfcf;
+  padding-bottom: 15px;
+}
+
+.container > div {
+  margin: 20px 0;
+}
+
+/*# sourceMappingURL=all.css.map */
