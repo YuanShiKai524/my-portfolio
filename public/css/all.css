@@ -26,6 +26,9 @@ html, body, h1, h2, h3, h4, h5, h6 {
 #root {
   max-width: 1400px;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .shadow {
@@ -39,14 +42,12 @@ html, body, h1, h2, h3, h4, h5, h6 {
 .row {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  margin-bottom: 20px;
 }
 
 .col {
   margin: 10px;
-}
-
-[class*=col-] {
-  flex: 100%;
 }
 
 @media only screen and (min-width: 713px) {
@@ -55,9 +56,11 @@ html, body, h1, h2, h3, h4, h5, h6 {
   }
   .col-4 {
     flex: 33.33%;
+    height: fit-content;
   }
   .col-8 {
     flex: 66.66%;
+    height: fit-content;
   }
 }
 .left-col img {
