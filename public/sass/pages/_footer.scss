@@ -1,0 +1,8 @@
+@use '../helpers/variables';
+
+footer {
+  width: 100%;
+  background-color: variables.$primary-color;
+}
+
+// footer

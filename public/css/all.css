@@ -56,12 +56,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
   .col-4 {
     flex: 33.33%;
   }
-  .col-5 {
-    flex: 41.66%;
-  }
-  .col-7 {
-    flex: 58.33%;
-  }
   .col-8 {
     flex: 66.66%;
   }
@@ -100,6 +94,11 @@ html, body, h1, h2, h3, h4, h5, h6 {
 
 .container > div {
   margin: 20px 0;
+}
+
+footer {
+  width: 100%;
+  background-color: #009688;
 }
 
 /*# sourceMappingURL=all.css.map */

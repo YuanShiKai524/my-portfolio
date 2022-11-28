@@ -4,11 +4,13 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className='row'>
-      <LeftColumn />
-      <RightColumn />
+    <>
+      <div className='row'>
+        <LeftColumn />
+        <RightColumn />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

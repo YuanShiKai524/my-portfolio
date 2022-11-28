@@ -1,3 +1,5 @@
+@use '../helpers/variables';
+
 .left-col {
   img {
     width: 100%;
@@ -10,7 +12,7 @@
     display: block;
     svg {
       margin-right: 12px;
-      color: #009688;
+      color: variables.$primary-color;
     }
   }
 }
