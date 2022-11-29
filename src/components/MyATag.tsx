@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactElement | null | string
 }
 
-const MyATag: React.FC<Props> = (props: Props) => {
+const MyATag = (props: Props) => {
 
   return (
     <a rel="noopener noreferrer" target='_blank' {...props}>{props.children}</a>
