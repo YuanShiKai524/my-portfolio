@@ -4,3 +4,25 @@ footer {
   width: 100%;
   background-color: variables.$primary-color;
 }
+
+.footer-content-container {
+  @include flex-center;
+  @include m-10;
+  flex-direction: column;
+  & > div {
+    padding: 7.5px 0;
+    color: whitesmoke;
+    &:nth-child(2) {
+      a {
+        padding: 0 2px;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    svg, a {
+      color: whitesmoke;
+    }
+  }
+}

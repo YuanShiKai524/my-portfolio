@@ -104,4 +104,26 @@ footer {
   background-color: #009688;
 }
 
+.footer-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: column;
+}
+.footer-content-container > div {
+  padding: 7.5px 0;
+  color: whitesmoke;
+}
+.footer-content-container > div:nth-child(2) a {
+  padding: 0 2px;
+}
+.footer-content-container > div:nth-child(2) svg {
+  width: 20px;
+  height: 20px;
+}
+.footer-content-container > div svg, .footer-content-container > div a {
+  color: whitesmoke;
+}
+
 /*# sourceMappingURL=all.css.map */
