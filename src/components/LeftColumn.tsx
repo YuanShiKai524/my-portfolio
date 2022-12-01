@@ -1,7 +1,23 @@
+import { useEffect, useState } from "react"
+
 const LeftColumn = () => {
+
+  let [winWidth, setWinWidth] = useState<number>(window.innerWidth > 1400 ? 1400 : window.innerWidth)
+
+  // 加上resize監聽事件，監聽innerWidth是否變動，有變動則改變state的值
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if(window.innerWidth > 1400) {
+        setWinWidth(1400);
+      } else {
+        setWinWidth(window.innerWidth);
+      }
+    })
+  }, [])
+
   return (
     <div className='col-4 col left-col shadow'>
-      <div className="portrait-container">
+      <div className="portrait-container" style={{ minHeight: winWidth < 713 ? `${winWidth * 0.75 - 8}px` : `${winWidth * 0.3333 * 0.75 - 8}px` }}>
         <img src='/images/portrait.jpg' alt="portrait" />
         <span className="my-name">Jeff Chen</span>
       </div>
