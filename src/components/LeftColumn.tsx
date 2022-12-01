@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 interface CssProp {
-  minHeight: string   
+  minHeight: string
 }
 
 const LeftColumn = () => {

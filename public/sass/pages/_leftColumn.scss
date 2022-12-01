@@ -2,6 +2,8 @@
 
 .left-col {
   img {
+    position:absolute;
+    height: 100%;
     width: 100%;
   }
   span {
@@ -19,6 +21,7 @@
 
 .portrait-container {
   position: relative;
+  background-color: #5084d1eb;
   .my-name {
     position: absolute;
     bottom: 8px;

@@ -64,6 +64,8 @@ html, body, h1, h2, h3, h4, h5, h6 {
   }
 }
 .left-col img {
+  position: absolute;
+  height: 100%;
   width: 100%;
 }
 .left-col span {
@@ -80,6 +82,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
 
 .portrait-container {
   position: relative;
+  background-color: rgba(80, 132, 209, 0.9215686275);
 }
 .portrait-container .my-name {
   position: absolute;
