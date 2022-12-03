@@ -75,7 +75,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
   padding: 5px 0;
   display: block;
 }
-.left-col li svg {
+.left-col svg {
   margin-right: 12px;
   color: #009688;
 }
@@ -98,8 +98,55 @@ html, body, h1, h2, h3, h4, h5, h6 {
   padding-bottom: 15px;
 }
 
-.container > div {
-  margin: 20px 0;
+.section {
+  margin: 35px 0;
+}
+.section .title {
+  font-size: larger;
+  font-weight: bolder;
+}
+.section .item-name {
+  display: inline-block;
+  margin: 15px 0;
+}
+.section .inside, .section .outside {
+  border-radius: 16px;
+}
+.section .outside {
+  width: 100%;
+  background-color: #e4e1e1;
+  line-height: 20px;
+}
+.section .outside .language {
+  height: 25px;
+}
+.section .inside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #009688;
+  color: whitesmoke;
+}
+.section .inside-javascript {
+  width: 95%;
+}
+.section .inside-react {
+  width: 85%;
+}
+.section .inside-typescript {
+  width: 70%;
+}
+.section .inside-sass {
+  width: 70%;
+}
+.section .inside-chinese {
+  width: 100%;
+}
+.section .inside-japanese {
+  width: 95%;
+}
+.section .inside-english {
+  width: 80%;
 }
 
 footer {

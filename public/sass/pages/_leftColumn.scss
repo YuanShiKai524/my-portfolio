@@ -2,31 +2,36 @@
 
 .left-col {
   img {
-    position:absolute;
+    position: absolute;
     height: 100%;
     width: 100%;
   }
+
   span {
-    color: #757575;
+    color: variables.$secondary-color;
   }
+
   li {
     padding: 5px 0;
     display: block;
-    svg {
-      margin-right: 12px;
-      color: variables.$primary-color;
-    }
+  }
+
+  svg {
+    margin-right: 12px;
+    color: variables.$primary-color;
   }
 }
 
 .portrait-container {
   position: relative;
   background-color: #5084d1eb;
+
   .my-name {
     position: absolute;
     bottom: 8px;
     left: 16px;
     color: whitesmoke;
+
     font: {
       size: 35px;
       weight: 550;
@@ -39,6 +44,68 @@
   padding-bottom: 15px;
 }
 
-.container > div {
-  margin: 20px 0 ;
+.section {
+  margin: 35px 0;
+
+  .title {
+    font: {
+      size: larger;
+      weight: bolder;
+    }
+  }
+
+  .item-name {
+    display: inline-block;
+    margin: 15px 0;
+  }
+
+  %bar {
+    border-radius: 16px;
+  }
+
+  .outside {
+    @extend %bar;
+    width: 100%;
+    background-color: #e4e1e1;
+    line-height: 20px;
+
+    .language {
+      height: 25px;
+    }
+  }
+
+  .inside {
+    @extend %bar;
+    @include flex-center;
+    background-color: variables.$primary-color;
+    color: whitesmoke;
+
+    &-javascript {
+      width: 95%;
+    }
+
+    &-react {
+      width: 85%;
+    }
+
+    &-typescript {
+      width: 70%;
+    }
+
+    &-sass {
+      width: 70%;
+    }
+
+    &-chinese {
+      width: 100%;
+    }
+
+    &-japanese {
+      width: 95%;
+    }
+
+    &-english {
+      width: 80%;
+    }
+  }
 }
