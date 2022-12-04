@@ -14,6 +14,11 @@
   li {
     padding: 5px 0;
     display: block;
+
+    &:nth-child(3) span, &:nth-child(4) span {
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
   }
 
   svg {
@@ -80,7 +85,7 @@
     background-color: variables.$primary-color;
     color: whitesmoke;
 
-    &-javascript {
+    &-javascript, &-japanese {
       width: 95%;
     }
 
@@ -88,20 +93,16 @@
       width: 85%;
     }
 
-    &-typescript {
-      width: 70%;
+    &-typescript, &-sass {
+      width: 75%;
     }
 
-    &-sass {
+    &-nodejs {
       width: 70%;
     }
 
     &-chinese {
       width: 100%;
-    }
-
-    &-japanese {
-      width: 95%;
     }
 
     &-english {

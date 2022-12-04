@@ -20,7 +20,7 @@ body {
 }
 
 html, body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "標楷體", sans-serif;
+  font-family: "Helvetica", "Arial", "LiHei Pro", sans-serif;
 }
 
 #root {
@@ -50,7 +50,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
   margin: 10px;
 }
 
-@media only screen and (min-width: 713px) {
+@media only screen and (min-width: 641px) {
   .row {
     flex-direction: row;
   }
@@ -74,6 +74,10 @@ html, body, h1, h2, h3, h4, h5, h6 {
 .left-col li {
   padding: 5px 0;
   display: block;
+}
+.left-col li:nth-child(3) span, .left-col li:nth-child(4) span {
+  text-decoration-line: underline;
+  cursor: pointer;
 }
 .left-col svg {
   margin-right: 12px;
@@ -127,23 +131,20 @@ html, body, h1, h2, h3, h4, h5, h6 {
   background-color: #009688;
   color: whitesmoke;
 }
-.section .inside-javascript {
+.section .inside-javascript, .section .inside-japanese {
   width: 95%;
 }
 .section .inside-react {
   width: 85%;
 }
-.section .inside-typescript {
-  width: 70%;
+.section .inside-typescript, .section .inside-sass {
+  width: 75%;
 }
-.section .inside-sass {
+.section .inside-nodejs {
   width: 70%;
 }
 .section .inside-chinese {
   width: 100%;
-}
-.section .inside-japanese {
-  width: 95%;
 }
 .section .inside-english {
   width: 80%;

@@ -8,7 +8,7 @@ const LeftColumn = () => {
 
   const [winWidth, setWinWidth] = useState<number>(window.innerWidth > 1400 ? 1400 : window.innerWidth)
 
-  const styleProp: CssProp = { minHeight: winWidth < 713 ? `${winWidth * 0.75 - 8}px` : `${winWidth * 0.3333 * 0.75 - 8}px` };
+  const styleProp: CssProp = { minHeight: winWidth < 641 ? `${winWidth * 0.75 - 8}px` : `${winWidth * 0.3333 * 0.75 - 8}px` };
 
   // 加上resize監聽事件，監聽innerWidth是否變動，有變動則改變state的值
   useEffect(() => {
@@ -48,13 +48,13 @@ const LeftColumn = () => {
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope-fill" viewBox="0 0 16 16">
                 <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
               </svg>
-              <span>gcobc04992@gmail.com</span>
+              <span>Contact me by email</span>
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-telephone-fill" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
               </svg>
-              <span>0916-090-156</span>
+              <span>Contact me by phone</span>
             </li>
           </ul>
         </div>
@@ -65,21 +65,25 @@ const LeftColumn = () => {
             </svg>
             <span className="title">Skills</span>
           </div>
-          <span className="item-name">JavaScript</span>
-          <div className="outside">
-            <div className="inside inside-javascript">95%</div>
-          </div>
           <span className="item-name">React</span>
           <div className="outside">
             <div className="inside inside-react">85%</div>
           </div>
-          <span className="item-name">TypeScript</span>
+          <span className="item-name">JavaScript</span>
           <div className="outside">
-            <div className="inside inside-typescript">70%</div>
+            <div className="inside inside-javascript">95%</div>
           </div>
           <span className="item-name">Sass</span>
           <div className="outside">
-            <div className="inside inside-sass">70%</div>
+            <div className="inside inside-sass">75%</div>
+          </div>
+          <span className="item-name">TypeScript</span>
+          <div className="outside">
+            <div className="inside inside-typescript">75%</div>
+          </div>
+          <span className="item-name">NodeJS</span>
+          <div className="outside">
+            <div className="inside inside-nodejs">70%</div>
           </div>
         </div>
         <div className="section">
