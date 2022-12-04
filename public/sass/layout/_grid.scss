@@ -1,3 +1,5 @@
+@use '../helpers/variables';
+
 .row {
   display: flex;
   flex-direction: column;
@@ -7,6 +9,15 @@
 
 .col {
   margin: 10px;
+  
+  span {
+    color: variables.$secondary-color;
+  }
+
+  svg {
+    margin-right: 12px;
+    color: variables.$primary-color;
+  }
 }
 
 @media only screen and (min-width: 641px) {

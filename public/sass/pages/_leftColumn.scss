@@ -7,23 +7,15 @@
     width: 100%;
   }
 
-  span {
-    color: variables.$secondary-color;
-  }
-
   li {
-    padding: 5px 0;
+    padding: 8px 0;
     display: block;
 
-    &:nth-child(3) span, &:nth-child(4) span {
+    &:nth-child(3) span,
+    &:nth-child(4) span {
       text-decoration-line: underline;
       cursor: pointer;
     }
-  }
-
-  svg {
-    margin-right: 12px;
-    color: variables.$primary-color;
   }
 }
 
@@ -51,6 +43,10 @@
 
 .section {
   margin: 35px 0;
+
+  & > div:first-child {
+    margin-bottom: 10px;
+  }
 
   .title {
     font: {
@@ -85,7 +81,8 @@
     background-color: variables.$primary-color;
     color: whitesmoke;
 
-    &-javascript, &-japanese {
+    &-javascript,
+    &-japanese {
       width: 95%;
     }
 
@@ -93,7 +90,8 @@
       width: 85%;
     }
 
-    &-typescript, &-sass {
+    &-typescript,
+    &-sass {
       width: 75%;
     }
 

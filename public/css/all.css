@@ -23,6 +23,11 @@ html, body, h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica", "Arial", "LiHei Pro", sans-serif;
 }
 
+.col h1, .col h3 {
+  margin: 0;
+  color: #757575;
+}
+
 #root {
   max-width: 1400px;
   margin: 0 auto;
@@ -49,6 +54,13 @@ html, body, h1, h2, h3, h4, h5, h6 {
 .col {
   margin: 10px;
 }
+.col span {
+  color: #757575;
+}
+.col svg {
+  margin-right: 12px;
+  color: #009688;
+}
 
 @media only screen and (min-width: 641px) {
   .row {
@@ -68,20 +80,13 @@ html, body, h1, h2, h3, h4, h5, h6 {
   height: 100%;
   width: 100%;
 }
-.left-col span {
-  color: #757575;
-}
 .left-col li {
-  padding: 5px 0;
+  padding: 8px 0;
   display: block;
 }
 .left-col li:nth-child(3) span, .left-col li:nth-child(4) span {
   text-decoration-line: underline;
   cursor: pointer;
-}
-.left-col svg {
-  margin-right: 12px;
-  color: #009688;
 }
 
 .portrait-container {
@@ -104,6 +109,9 @@ html, body, h1, h2, h3, h4, h5, h6 {
 
 .section {
   margin: 35px 0;
+}
+.section > div:first-child {
+  margin-bottom: 10px;
 }
 .section .title {
   font-size: larger;
@@ -148,6 +156,60 @@ html, body, h1, h2, h3, h4, h5, h6 {
 }
 .section .inside-english {
   width: 80%;
+}
+
+.section-container {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 20px 0;
+}
+.section-container .title-section {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+}
+.section-container .title-section svg {
+  display: inline-block;
+  margin-right: 20px;
+  width: 32px;
+  height: 32px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.content-section {
+  margin: 10px;
+}
+
+.content-container {
+  border-bottom: 1px solid #d2cfcf;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.content-container:last-child {
+  border-bottom: 0px;
+  margin-bottom: 0;
+}
+.content-container:last-child p {
+  margin: 0;
+}
+.content-container > div {
+  display: flex;
+  align-items: center;
+  padding: 20px 16px;
+}
+.content-container span {
+  color: #009688;
+}
+.content-container p,
+.content-container h3 {
+  padding: 0 16px;
+}
+.content-container p {
+  margin-top: 0;
 }
 
 footer {

@@ -1,0 +1,61 @@
+@use '../helpers/variables';
+
+.section-container {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  padding: 20px 0;
+
+  .title-section {
+    @include flex-align-center;
+    padding: 10px 16px;
+
+    svg {
+      display: inline-block;
+      margin-right: 20px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.content-section {
+  @include m-10;
+}
+
+.content-container {
+  @include border-bottom;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  &:last-child {
+    border-bottom: 0px;
+    margin-bottom: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  & > div {
+    @include flex-align-center;
+    padding: 20px 16px;
+  }
+
+  span {
+    color: variables.$primary-color;
+  }
+
+  p,
+  h3 {
+    padding: 0 16px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

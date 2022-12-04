@@ -4,6 +4,11 @@
   justify-content: center;
 }
 
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
 @mixin m-10 {
   margin: 10px;
 }
