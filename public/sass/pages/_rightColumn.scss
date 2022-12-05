@@ -5,14 +5,14 @@
   padding: 20px 0;
 
   .title-section {
-    @include flex-align-center;
     padding: 10px 16px;
+    vertical-align: middle;
 
     svg {
-      display: inline-block;
       margin-right: 20px;
-      width: 32px;
-      height: 32px;
+      width: 35px;
+      height: 35px;
+      vertical-align: top;
     }
   }
 }
@@ -41,13 +41,15 @@
     }
   }
 
-  & > div {
-    @include flex-align-center;
+  & > span {
     padding: 20px 16px;
-  }
-
-  span {
     color: variables.$primary-color;
+    vertical-align: middle;
+
+    svg {
+      vertical-align: top;
+      height: 17px;
+    }
   }
 
   p,

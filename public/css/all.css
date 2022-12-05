@@ -163,15 +163,14 @@ html, body, h1, h2, h3, h4, h5, h6 {
   padding: 20px 0;
 }
 .section-container .title-section {
-  display: flex;
-  align-items: center;
   padding: 10px 16px;
+  vertical-align: middle;
 }
 .section-container .title-section svg {
-  display: inline-block;
   margin-right: 20px;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
+  vertical-align: top;
 }
 
 .mb-16 {
@@ -196,13 +195,14 @@ html, body, h1, h2, h3, h4, h5, h6 {
 .content-container:last-child p {
   margin: 0;
 }
-.content-container > div {
-  display: flex;
-  align-items: center;
+.content-container > span {
   padding: 20px 16px;
-}
-.content-container span {
   color: #009688;
+  vertical-align: middle;
+}
+.content-container > span svg {
+  vertical-align: top;
+  height: 17px;
 }
 .content-container p,
 .content-container h3 {
