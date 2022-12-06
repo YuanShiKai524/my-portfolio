@@ -113,6 +113,8 @@ const GetData = ({dataUrl}: Props): JSX.Element => {
                       </div>
                     </div>
                   )
+                } else {
+                  return "";
                 }
               })
             }
