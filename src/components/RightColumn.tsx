@@ -37,7 +37,9 @@ const RightColumn = () => {
           </div>
         </div>
       </div>
-      <GetData />
+      <div className="section-container">
+        <GetData dataUrl="/data/works.json" />
+      </div>
     </div>
   )
 }

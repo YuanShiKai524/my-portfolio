@@ -1,6 +1,19 @@
 import { useEffect, useState } from 'react'
 import axios, { AxiosResponse, AxiosError } from 'axios'
 
+interface Props {
+  dataUrl: string
+}
+
+interface Title<S = string> {
+  name: S
+  svgClass: S
+  path: {
+    1: S
+    2: S
+  }
+}
+
 interface Work<S = string> {
   company: S
   position: S
@@ -21,25 +34,13 @@ interface Education<S = string> {
   status: S
 }
 
-interface Data<S = string> {
-  title: {
-    name: S
-    svgClass: S
-    path: {
-      1: S
-      2: S
-    }
-  }
+interface Data {
+  title: Title
   college?: Education
   high_school?: Education
   root2?: Work
   hnw?: Work
   kura?: Work
-}
-
-interface ResponseData {
-  education: Data
-  works: Data
 }
 
 interface DataStatus {
@@ -48,7 +49,7 @@ interface DataStatus {
   data: Data
 }
 
-const GetData = () => {
+const GetData = ({dataUrl}: Props): JSX.Element => {
 
   const initDataStatus: DataStatus = {
     isLoading: true,
@@ -69,10 +70,10 @@ const GetData = () => {
 
   useEffect(() => {
     if (dataStatus.isLoading) {
-      axios('/data/data.json')
+      axios(dataUrl)
         .then(
-          (res: AxiosResponse<ResponseData>) => {
-            setDataStatus({ ...dataStatus, isLoading: false, data: res.data.works })
+          (res: AxiosResponse<Data>) => {
+            setDataStatus({ ...dataStatus, isLoading: false, data: res.data})
           }
         )
         .catch((err: AxiosError) => {
@@ -81,8 +82,8 @@ const GetData = () => {
     }
   }, [])
 
-  const { isLoading, errorMsg, data: { title, root2, hnw, kura } } = dataStatus
-  const { name, svgClass, path } = title
+  const { isLoading, errorMsg, data } = dataStatus
+  const { name, svgClass, path } = data.title
 
   return (
     <>
@@ -98,6 +99,9 @@ const GetData = () => {
             {name}
           </h1>
           <div className="content-section">
+            {
+              
+            }
             <div className="content-container">
               <h3>株式会社ROOT2</h3>
               <h3>飯店櫃檯人員</h3>
