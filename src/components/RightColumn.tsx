@@ -1,4 +1,14 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 const RightColumn = () => {
+
+  // useState({})
+
+  // useEffect(() => {
+    
+  // }, [])
+
   return (
     <div className="col-8 col">
       <div className="section-container mb-16">
