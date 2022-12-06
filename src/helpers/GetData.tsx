@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import axios, {AxiosResponse, AxiosError} from 'axios'
+import axios, { AxiosResponse, AxiosError } from 'axios'
 
 interface Work<S = string> {
   company: S
@@ -70,55 +70,52 @@ const GetData = () => {
   useEffect(() => {
     if (dataStatus.isLoading) {
       axios('/data/data.json')
-      .then(
-        (res: AxiosResponse<ResponseData>) => {
-          setDataStatus({...dataStatus, isLoading: false, data: res.data.works})
-        }
-      )
-      .catch((err: AxiosError) => {
-        setDataStatus({...dataStatus, isLoading: false, errorMsg: err.message})
-      })
+        .then(
+          (res: AxiosResponse<ResponseData>) => {
+            setDataStatus({ ...dataStatus, isLoading: false, data: res.data.works })
+          }
+        )
+        .catch((err: AxiosError) => {
+          setDataStatus({ ...dataStatus, isLoading: false, errorMsg: err.message })
+        })
     }
   }, [])
 
-  const {isLoading, errorMsg, data: {title, root2, hnw, kura}} = dataStatus
-  const {name,svgClass, path} = title
+  const { isLoading, errorMsg, data: { title, root2, hnw, kura } } = dataStatus
+  const { name, svgClass, path } = title
 
   return (
     <>
       {
         isLoading ? <h1>Loading...</h1> :
-        errorMsg ? <h1 style={{color: "red"}}>{errorMsg}</h1> :
+        errorMsg ? <h1 style={{ color: "red" }}>{errorMsg}</h1> :
         <>
           <h1 className="title-section">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className={title.svgClass} viewBox="0 0 16 16">
-              <path d={title.path[1]} />
-              <path d={title.path[2]} />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className={svgClass} viewBox="0 0 16 16">
+              <path d={path["1"]} />
+              <path d={path["2"]} />
             </svg>
-            {title.name}
+            {name}
           </h1>
           <div className="content-section">
             <div className="content-container">
-              <h3>{}</h3>
-              <h3>{}</h3>
+              <h3>株式会社ROOT2</h3>
+              <h3>飯店櫃檯人員</h3>
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-calendar" viewBox="0 0 16 16">
                   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                 </svg>
-                2010&nbsp;-&nbsp;2014
+                Apr&nbsp;2019&nbsp;-&nbsp;Nov&nbsp;2021
               </span>
-              <p className="sub-content">Department of Economics, Bachelor Degree</p>
-            </div>
-            <div className="content-container">
-              <h3>New Taipei Municipal SanChong High School</h3>
-              <h3>新北市立三重高中</h3>
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-calendar" viewBox="0 0 16 16">
-                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                </svg>
-                2007&nbsp;-&nbsp;2010
-              </span>
-              <p className="sub-content">Graduated</p>
+              <div className="sub-content">
+                地點：日本京都。<br />產業：飯店經營業。<br /><br />
+                工作內容：<br />
+                <ul>
+                  <li>處理入住及退房、接洽預約、後台系統管理訂單及安排房間、處理及應對客人入住期間所遇到的問題。</li>
+                  <li>備品的庫存管理、與預約平台業者或飯店房間內之用品廠商的接洽、英日中三語翻譯、客戶資料建檔及管理。</li>
+                  <li>處理客訴、分配工讀生工作項目及監管其業務效率、培訓新人、協助打掃人員飯店內各處環境衛生處理、製作及販賣餐點及飲品等所有飯店之相關業務。</li>
+                </ul>
+              </div>
             </div>
           </div>
         </>
