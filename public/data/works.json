@@ -8,8 +8,8 @@
     }
   },
   "root2": {
-    "company": "株式会社ROOT2",
-    "position": "飯店櫃檯人員",
+    "subtitle1": "株式会社ROOT2",
+    "subtitle2": "飯店櫃檯人員",
     "year": "Apr 2019 - Nov 2021",
     "location": "日本京都。",
     "industry": "飯店經營業。",
@@ -20,8 +20,8 @@
     }
   },
   "hnw": {
-    "company": "株式会社ハウスネットワーク",
-    "position": "助理會計、業務助理",
+    "subtitle1": "株式会社ハウスネットワーク",
+    "subtitle2": "助理會計、業務助理",
     "year": "Aug 2018 - Dec 2018",
     "location": "日本京都。",
     "industry": "不動產經營與租賃業。",
@@ -32,8 +32,8 @@
     }
   },
   "kura": {
-    "company": "くら寿司株式会社",
-    "position": "儲備幹部",
+    "subtitle1": "くら寿司株式会社",
+    "subtitle2": "儲備幹部",
     "year": "Apr 2018 - Jul 2018",
     "location": "日本京都。",
     "industry": "餐飲業。",

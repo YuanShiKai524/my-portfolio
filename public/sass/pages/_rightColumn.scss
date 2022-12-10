@@ -20,6 +20,14 @@
       vertical-align: top;
     }
   }
+
+  div:last-child > .content-container {
+    border-bottom: 0;
+    margin-bottom: 0;
+    p, ul {
+      margin-bottom: 0;
+    } 
+  }
 }
 
 .content-section {
@@ -31,15 +39,6 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-
-  &:last-child {
-    border-bottom: 0px;
-    margin-bottom: 0;
-
-    p {
-      margin: 0;
-    }
-  }
 
   & > span {
     padding: 20px 16px;
@@ -64,9 +63,5 @@
       list-style-type: disc;
       @include mb-16;
     }
-  }
-
-  &:last-child ul {
-    margin-bottom: 0;
   }
 }

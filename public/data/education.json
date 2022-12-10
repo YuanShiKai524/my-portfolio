@@ -8,14 +8,14 @@
     }
   },
   "college": {
-    "school_en": "Ming Chuan University",
-    "school_cn": "銘傳大學",
+    "subtitle1": "Ming Chuan University",
+    "subtitle2": "銘傳大學",
     "year": "2010 - 2014",
     "status": "Department of Economics, Bachelor Degree"
   },
   "high_school": {
-    "school_en": "New Taipei Municipal SanChong High School",
-    "school_cn": "新北市立三重高中",
+    "subtitle1": "New Taipei Municipal SanChong High School",
+    "subtitle2": "新北市立三重高中",
     "year": "2007 - 2010",
     "status": "Graduated"
   }
