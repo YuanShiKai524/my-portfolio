@@ -8,7 +8,7 @@ type Props = {
   }
 }
 
-const ShowData = ({ resource }: Props) => {
+const ShowRightData = ({ resource }: Props) => {
 
   const allData = resource.result.read()
 
@@ -84,4 +84,4 @@ const ShowData = ({ resource }: Props) => {
   )
 }
 
-export default ShowData
+export default ShowRightData
