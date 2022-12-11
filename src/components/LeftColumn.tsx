@@ -10,15 +10,22 @@ const LeftColumn = () => {
 
   const styleProp: CssProp = { minHeight: winWidth < 641 ? `${winWidth * 0.75 - 8}px` : `${winWidth * 0.3333 * 0.75 - 8}px` };
 
-  // 加上resize監聽事件，監聽innerWidth是否變動，有變動則改變state的值
+  // 此函數用於更新winWidth的值(若innerWidth有變動)
+  const updateWinWidth = (): void => {
+    if (window.innerWidth > 1400) {
+      setWinWidth(1400);
+    } else {
+      setWinWidth(window.innerWidth);
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener("resize", (): void => {
-      if (window.innerWidth > 1400) {
-        setWinWidth(1400);
-      } else {
-        setWinWidth(window.innerWidth);
-      }
-    })
+    // 加上resize監聽事件，監聽innerWidth是否變動，有變動則改變winWidth的值
+    window.addEventListener("resize", updateWinWidth)
+
+    return () => {
+      window.removeEventListener('resize', updateWinWidth)
+    }
   }, [])
 
   return (

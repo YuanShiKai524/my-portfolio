@@ -62,6 +62,7 @@
     ul {
       list-style-type: disc;
       @include mb-16;
+      margin-top: 5px;
     }
   }
 }

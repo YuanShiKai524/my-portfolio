@@ -54,9 +54,9 @@ const ShowRightData = ({ resource }: Props) => {
                                     <div className="sub-content">
                                       {
                                         <>
-                                          地點：{dataObj.location}<br />
-                                          產業：{dataObj.industry}<br /><br />
-                                          工作內容：<br />
+                                          <b>地點：</b>{dataObj.location}<br />
+                                          <b>產業：</b>{dataObj.industry}<br /><br />
+                                          <b>工作內容：</b><br />
                                           <ul>
                                             {
                                               Object.keys(dataObj.descriptions).map((key) => {
