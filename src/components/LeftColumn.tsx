@@ -1,9 +1,16 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, Suspense, useMemo } from "react"
 import Brief from "./Brief"
 import Advantages from "./Advantages"
+import FetchData, { MyResponse } from "../helpers/FetchData"
 
 interface CssProp {
   minHeight: string
+}
+
+interface Result {
+  result: {
+    read: () => MyResponse;
+  }
 }
 
 const LeftColumn = () => {
@@ -11,6 +18,9 @@ const LeftColumn = () => {
   const [winWidth, setWinWidth] = useState<number>(window.innerWidth > 1400 ? 1400 : window.innerWidth)
 
   const styleProp: CssProp = { minHeight: winWidth < 641 ? `${winWidth * 0.75 - 8}px` : `${winWidth * 0.3333 * 0.75 - 8}px` };
+
+  // 請求數據後的結果
+  const [resource] = useState<Result>( useMemo(() => FetchData('/data/leftData.json'), []) )
 
   // 此函數用於更新winWidth的值(若innerWidth有變動)
   const updateWinWidth = (): void => {
@@ -38,9 +48,13 @@ const LeftColumn = () => {
       </div>
       <div className="container">
         <div className="brief-container">
-          <Brief />
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Brief resource={resource} />
+          </Suspense>
         </div>
-        <Advantages />
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Advantages />
+        </Suspense>
       </div>
     </div>
   )

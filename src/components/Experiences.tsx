@@ -1,14 +1,6 @@
-import { MyResponse } from "../helpers/FetchData"
+import { Resource } from '../components/Brief'
 
-type Props = {
-  resource: {
-    result: {
-      read: () => MyResponse
-    }
-  }
-}
-
-const Experiences = ({ resource }: Props) => {
+const Experiences = ({ resource }: Resource) => {
 
   const allData = resource.result.read()
 

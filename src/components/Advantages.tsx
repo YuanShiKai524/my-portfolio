@@ -1,5 +1,8 @@
+import { memo } from 'react'
+import { Resource } from "./Brief"
 
 const Advantages = () => {
+
   return (
     <>
       <div className="section">
@@ -55,4 +58,4 @@ const Advantages = () => {
   )
 }
 
-export default Advantages
+export default memo(Advantages)
