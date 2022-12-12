@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import FetchData from "../helpers/FetchData";
-import ShowRightData from "./ShowRightData"
+import Experiences from "./Experiences"
 
 const RightColumn = () => {
 
@@ -9,7 +9,7 @@ const RightColumn = () => {
   return (
     <div className="col-8 col">
       <Suspense fallback={<h1>Loading...</h1>}>
-        <ShowRightData resource={resource} />
+        <Experiences resource={resource} />
       </Suspense>
     </div>
   )

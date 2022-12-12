@@ -8,7 +8,7 @@ type Props = {
   }
 }
 
-const ShowRightData = ({ resource }: Props) => {
+const Experiences = ({ resource }: Props) => {
 
   const allData = resource.result.read()
 
@@ -31,10 +31,10 @@ const ShowRightData = ({ resource }: Props) => {
                           return (
                             <h1 className="title-section" key={key}>
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className={dataObj.svgClass} viewBox="0 0 16 16">
-                                <path d={dataObj.path.a} />
-                                <path d={dataObj.path.b} />
+                                <path d={dataObj.path.d1} />
+                                <path d={dataObj.path.d2} />
                               </svg>
-                              {dataObj.name}
+                              {dataObj.content}
                             </h1>
                           )
                         } else {
@@ -84,4 +84,4 @@ const ShowRightData = ({ resource }: Props) => {
   )
 }
 
-export default ShowRightData
+export default Experiences

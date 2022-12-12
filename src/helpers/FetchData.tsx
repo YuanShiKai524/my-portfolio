@@ -1,12 +1,25 @@
 import axios, { AxiosError } from 'axios'
 
 interface Title<S = string> {
-  name: S
+  content: S
   svgClass: S
-  path: { 
-    a : S 
-    b : S 
+  path: {
+    [key: string]: S
   }
+}
+
+interface Brief {
+  [key: string]: Title
+}
+
+interface Advantage<S = string> {
+  title: Title
+  items: { [key: string]: S }[]
+}
+
+interface Advantages {
+  skills: Advantage
+  languages: Advantage
 }
 
 interface Work<S = string> {
@@ -36,7 +49,7 @@ interface Educations {
 }
 
 export interface MyResponse {
-  [key: string]: Educations & Works & string
+  [key: string]: Brief & Advantages & Educations & Works & string
 }
 
 const FetchData = (url: string) => {
