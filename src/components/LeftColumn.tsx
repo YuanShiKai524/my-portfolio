@@ -53,7 +53,7 @@ const LeftColumn = () => {
           </Suspense>
         </div>
         <Suspense fallback={<h1>Loading...</h1>}>
-          <Advantages />
+          <Advantages resource={resource} />
         </Suspense>
       </div>
     </div>

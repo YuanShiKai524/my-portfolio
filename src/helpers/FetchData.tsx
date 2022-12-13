@@ -12,14 +12,13 @@ interface Brief {
   [key: string]: Title
 }
 
-interface Advantage<S = string> {
+interface IAdvantage<S = string> {
   title: Title
   items: { [key: string]: S }[]
 }
 
-interface Advantages {
-  skills: Advantage
-  languages: Advantage
+export interface IAdvantages {
+  [key: string]: IAdvantage
 }
 
 interface Work<S = string> {
@@ -49,7 +48,7 @@ interface Educations {
 }
 
 export interface MyResponse {
-  [key: string]: Brief & Advantages & Educations & Works & string
+  [key: string]: Brief & IAdvantages & Educations & Works & string
 }
 
 const FetchData = (url: string) => {
