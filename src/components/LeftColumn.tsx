@@ -2,6 +2,8 @@ import { useEffect, useState, Suspense, useMemo } from "react"
 import Brief from "./Brief"
 import Advantages from "./Advantages"
 import FetchData, { MyResponse } from "../helpers/FetchData"
+import SkeletonAdvantages from "../skeletons/SkeletonAdvantages"
+import SkeletonBrief from "../skeletons/SkeletonBrief"
 
 interface CssProp {
   minHeight: string
@@ -48,11 +50,11 @@ const LeftColumn = () => {
       </div>
       <div className="container">
         <div className="brief-container">
-          <Suspense fallback={<h1>Loading...</h1>}>
+          <Suspense fallback={<SkeletonBrief />}>
             <Brief resource={resource} />
           </Suspense>
         </div>
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<SkeletonAdvantages />}>
           <Advantages resource={resource} />
         </Suspense>
       </div>

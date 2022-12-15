@@ -1,0 +1,32 @@
+.skeleton {
+  background-color: #ddd;
+  margin: auto 7px;
+  border-radius: 4px;
+  display: inline-block;
+
+  &.circle-sm {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+
+  &.circle-lg {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+  }
+
+  &.bar-sm {
+    width: 40%;
+    height: 10px;
+  }
+
+  &.bar-lg {
+    width: 90%;
+    height: 20px;
+  }
+}
+
+.skeleton-container {
+  padding: 7px 0;
+}
