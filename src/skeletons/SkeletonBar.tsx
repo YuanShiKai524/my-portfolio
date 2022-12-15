@@ -2,12 +2,18 @@ import SkeletonElement from "./SkeletonElement"
 
 type Props = {
   size: string
+  style?: {
+    [key: string]: string
+  }
+  elementStyle?: {
+    [key: string]: string
+  }
 }
 
-const SkeletonBar = ({ size }: Props) => {
+const SkeletonBar = ({ size, style, elementStyle }: Props) => {
   return (
-    <div className="skeleton-container">
-      <SkeletonElement type={`bar-${size}`} />
+    <div className="skeleton-container" style={style}>
+      <SkeletonElement type={`bar-${size}`} style={elementStyle} />
     </div>
   )
 }

@@ -1,13 +1,16 @@
 type Props = {
   type: string
+  style?: {
+    [key: string]: string
+  }
 }
 
-const SkeletonElement = ({ type }: Props) => {
+const SkeletonElement = ({ type, style }: Props) => {
 
   const styleClasses: string = `skeleton ${type}`
 
   return (
-    <div className={styleClasses}></div>
+    <div className={styleClasses} style={style}></div>
   )
 }
 

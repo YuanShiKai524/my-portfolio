@@ -24,7 +24,7 @@ const SkeletonAdvantages = () => {
                 array.map((value) => (
                   <Fragment key={value}>
                     <SkeletonBar size="sm" />
-                    <SkeletonBar size="lg" />
+                    <SkeletonBar size="lg" elementStyle={{width: "90%"}} />
                   </Fragment>
                 ))
               }
