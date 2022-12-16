@@ -9,7 +9,6 @@ const RightColumn = () => {
 
   return (
     <div className="col-8 col">
-      {/* {<SkeletonExperiences />} */}
       <Suspense fallback={<SkeletonExperiences />}>
         <Experiences resource={resource} />
       </Suspense>
