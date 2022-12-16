@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, memo } from "react"
 import SkeletonBarWithIcon from "./SkeletonBarWithIcon"
 import SkeletonBar from "./SkeletonBar"
 
@@ -18,7 +18,7 @@ const SkeletonAdvantages = () => {
       {
         advantages.map((array, index) => {
           return (
-            <div style={{marginTop: "30px"}} key={index}>
+            <div style={index === advantages.length-1 ? {marginTop: "30px", marginBottom: "34px"} : {marginTop: "30px"}} key={index}>
               <SkeletonBarWithIcon size="sm" />
               {
                 array.map((value) => (
@@ -36,4 +36,4 @@ const SkeletonAdvantages = () => {
   )
 }
 
-export default SkeletonAdvantages
+export default memo(SkeletonAdvantages)

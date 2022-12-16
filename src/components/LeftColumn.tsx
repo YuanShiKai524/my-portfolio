@@ -50,15 +50,15 @@ const LeftColumn = () => {
       </div>
       <div className="container">
         <div className="brief-container">
-          {<SkeletonBrief />}
-          {/* <Suspense fallback={<SkeletonBrief />}>
+          {/* {<SkeletonBrief />} */}
+          <Suspense fallback={<SkeletonBrief />}>
             <Brief resource={resource} />
-          </Suspense> */}
+          </Suspense>
         </div>
-        {<SkeletonAdvantages />}
-        {/* <Suspense fallback={<SkeletonAdvantages />}>
+        {/* {<SkeletonAdvantages />} */}
+        <Suspense fallback={<SkeletonAdvantages />}>
           <Advantages resource={resource} />
-        </Suspense> */}
+        </Suspense>
       </div>
     </div>
   )

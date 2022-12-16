@@ -10,10 +10,8 @@ type Props = {
 
 const SkeletonBarWithIcon = ({ size, classString, style }: Props) => {
 
-  const className = `skeleton-container ${classString}`
-
   return (
-    <div className={className} style={style}>
+    <div className={classString === undefined ? "skeleton-container" : `skeleton-container ${classString}`} style={style}>
       <SkeletonElement type={`circle-${size}`} />
       <SkeletonElement type={`bar-${size}`} />
     </div>
