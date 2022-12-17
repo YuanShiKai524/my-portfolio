@@ -75,11 +75,22 @@ html, body, h1, h2, h3, h4, h5, h6 {
     height: fit-content;
   }
 }
+@keyframes shimmer {
+  0% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: #ddd;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
 .skeleton {
-  background-color: #ddd;
   margin: auto 7px;
   border-radius: 4px;
   display: inline-block;
+  animation: shimmer 2s infinite;
 }
 .skeleton.circle-sm {
   width: 13px;

@@ -1,8 +1,14 @@
+@keyframes shimmer {
+  0% {background-color: #ccc;}
+  50% {background-color: #ddd;}
+  100% {background-color: #ccc;}
+}
+
 .skeleton {
-  background-color: #ddd;
   margin: auto 7px;
   border-radius: 4px;
   display: inline-block;
+  animation: shimmer 2s infinite;
 
   &.circle-sm {
     width: 13px;
