@@ -1,0 +1,17 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin m-10 {
+  margin: 10px;
+}
+
+@mixin mb-16 {
+  margin-bottom: 16px;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid #d2cfcf;
+}

@@ -1,0 +1,35 @@
+@use '../helpers/variables';
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex: 1; // 為了讓主內容佔整個版面，因此設置flex=1
+  margin-bottom: 20px; // 純粹讓主內容與footer有個間距
+}
+
+.col {
+  margin: 10px;
+  
+  span {
+    color: variables.$secondary-color;
+  }
+
+  svg {
+    margin-right: 12px;
+    color: variables.$primary-color;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .row {
+    flex-direction: row;
+  }
+  .col-4 {
+    flex: 33.33%;
+    height: fit-content; // 為避免被flex 1影響height，特地加上
+  }
+  .col-8 {
+    flex: 66.66%;
+    height: fit-content; // 為避免被flex 1影響height，特地加上
+  }
+}

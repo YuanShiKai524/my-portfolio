@@ -1,0 +1,310 @@
+@charset "UTF-8";
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 整個頁面都使用的通用樣式(沒有一個固定的分類) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica", "Arial", "LiHei Pro", sans-serif;
+}
+
+.col h1, .col h3 {
+  margin: 0;
+  color: #757575;
+}
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.col {
+  margin: 10px;
+}
+.col span {
+  color: #757575;
+}
+.col svg {
+  margin-right: 12px;
+  color: #009688;
+}
+
+@media only screen and (min-width: 641px) {
+  .row {
+    flex-direction: row;
+  }
+  .col-4 {
+    flex: 33.33%;
+    height: fit-content;
+  }
+  .col-8 {
+    flex: 66.66%;
+    height: fit-content;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: #ddd;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+.skeleton {
+  margin: auto 7px;
+  border-radius: 4px;
+  display: inline-block;
+  animation: shimmer 2s infinite;
+}
+.skeleton.circle-sm {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+.skeleton.circle-lg {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+.skeleton.bar-sm {
+  width: 40%;
+  height: 10px;
+}
+.skeleton.bar-lg {
+  width: 70%;
+  height: 20px;
+}
+
+.skeleton-container {
+  padding: 7px 0;
+}
+
+.left-col img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.left-col li {
+  padding: 8px 0;
+  display: block;
+}
+.left-col li:nth-child(3) span, .left-col li:nth-child(4) span {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.portrait-container {
+  position: relative;
+  background-color: rgba(80, 132, 209, 0.9215686275);
+}
+.portrait-container .my-name {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: whitesmoke;
+  font-size: 35px;
+  font-weight: 550;
+}
+
+.brief-container {
+  border-bottom: 1px solid #d2cfcf;
+  padding-bottom: 15px;
+}
+.brief-container a {
+  color: #757575;
+}
+.brief-container a:hover {
+  opacity: 0.7;
+}
+
+.error-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: red;
+}
+
+.errorAdvantages {
+  height: 150px;
+}
+
+.errorExperiences {
+  height: 300px;
+}
+
+.section {
+  margin: 35px 0;
+}
+.section > div:first-child {
+  margin-bottom: 10px;
+}
+.section .title {
+  font-size: larger;
+  font-weight: bolder;
+}
+.section .item-name {
+  display: inline-block;
+  margin: 15px 0;
+}
+.section .inside, .section .outside {
+  border-radius: 16px;
+}
+.section .outside {
+  width: 100%;
+  background-color: #e4e1e1;
+  line-height: 20px;
+}
+.section .outside .language {
+  height: 25px;
+}
+.section .inside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #009688;
+  color: whitesmoke;
+}
+.section .inside-javascript, .section .inside-japanese {
+  width: 95%;
+}
+.section .inside-react {
+  width: 85%;
+}
+.section .inside-typescript, .section .inside-english {
+  width: 80%;
+}
+.section .inside-sass {
+  width: 75%;
+}
+.section .inside-nodejs {
+  width: 70%;
+}
+.section .inside-chinese {
+  width: 100%;
+}
+
+.section-container {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 20px 0;
+  margin-bottom: 16px;
+}
+.section-container:last-child {
+  margin-bottom: 0;
+}
+.section-container .title-section {
+  padding: 10px 16px;
+  vertical-align: middle;
+}
+.section-container .title-section svg {
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+  vertical-align: top;
+}
+.section-container div:last-child > .content-container {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.section-container div:last-child > .content-container p, .section-container div:last-child > .content-container ul {
+  margin-bottom: 0;
+}
+
+.content-section {
+  margin: 10px;
+}
+
+.content-container {
+  border-bottom: 1px solid #d2cfcf;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.content-container > span {
+  padding: 20px 16px;
+  color: #009688;
+  vertical-align: middle;
+}
+.content-container > span svg {
+  vertical-align: top;
+  height: 17px;
+}
+.content-container .sub-content,
+.content-container h3 {
+  padding: 0 16px;
+}
+.content-container .sub-content {
+  margin-top: 0;
+}
+.content-container .sub-content ul {
+  list-style-type: disc;
+  margin-bottom: 16px;
+  margin-top: 5px;
+}
+
+footer {
+  width: 100%;
+  background-color: #009688;
+}
+
+.footer-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: column;
+}
+.footer-content-container > div {
+  padding: 7.5px 0;
+  color: whitesmoke;
+}
+.footer-content-container > div:nth-child(2) a {
+  padding: 0 2px;
+}
+.footer-content-container > div:nth-child(2) svg {
+  width: 20px;
+  height: 20px;
+}
+.footer-content-container > div svg, .footer-content-container > div a {
+  color: whitesmoke;
+}
+
+/*# sourceMappingURL=all.css.map */

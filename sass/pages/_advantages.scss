@@ -1,0 +1,69 @@
+@use '../helpers/variables';
+
+.section {
+  margin: 35px 0;
+
+  & > div:first-child {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font: {
+      size: larger;
+      weight: bolder;
+    }
+  }
+
+  .item-name {
+    display: inline-block;
+    margin: 15px 0;
+  }
+
+  %bar {
+    border-radius: 16px;
+  }
+
+  .outside {
+    @extend %bar;
+    width: 100%;
+    background-color: #e4e1e1;
+    line-height: 20px;
+
+    .language {
+      height: 25px;
+    }
+  }
+
+  .inside {
+    @extend %bar;
+    @include flex-center;
+    background-color: variables.$primary-color;
+    color: whitesmoke;
+
+    &-javascript,
+    &-japanese {
+      width: 95%;
+    }
+
+    &-react {
+      width: 85%;
+    }
+
+    &-typescript,
+    &-english {
+      width: 80%;
+    }
+
+    &-sass {
+      width: 75%;
+    }
+
+    &-nodejs {
+      width: 70%;
+    }
+
+    &-chinese {
+      width: 100%;
+    }
+  }
+}

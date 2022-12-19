@@ -1,0 +1,68 @@
+@use '../helpers/variables';
+
+.section-container {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  padding: 20px 0;
+  @include mb-16;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .title-section {
+    padding: 10px 16px;
+    vertical-align: middle;
+
+    svg {
+      margin-right: 20px;
+      width: 35px;
+      height: 35px;
+      vertical-align: top;
+    }
+  }
+
+  div:last-child > .content-container {
+    border-bottom: 0;
+    margin-bottom: 0;
+    p, ul {
+      margin-bottom: 0;
+    } 
+  }
+}
+
+.content-section {
+  @include m-10;
+}
+
+.content-container {
+  @include border-bottom;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  & > span {
+    padding: 20px 16px;
+    color: variables.$primary-color;
+    vertical-align: middle;
+
+    svg {
+      vertical-align: top;
+      height: 17px;
+    }
+  }
+
+  .sub-content,
+  h3 {
+    padding: 0 16px;
+  }
+
+  .sub-content {
+    margin-top: 0;
+
+    ul {
+      list-style-type: disc;
+      @include mb-16;
+      margin-top: 5px;
+    }
+  }
+}
