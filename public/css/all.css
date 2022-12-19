@@ -209,7 +209,10 @@ html, body, h1, h2, h3, h4, h5, h6 {
 .section .inside-react {
   width: 85%;
 }
-.section .inside-typescript, .section .inside-sass {
+.section .inside-typescript, .section .inside-english {
+  width: 80%;
+}
+.section .inside-sass {
   width: 75%;
 }
 .section .inside-nodejs {
@@ -217,9 +220,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
 }
 .section .inside-chinese {
   width: 100%;
-}
-.section .inside-english {
-  width: 80%;
 }
 
 .section-container {

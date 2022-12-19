@@ -50,6 +50,10 @@
     }
 
     &-typescript,
+    &-english {
+      width: 80%;
+    }
+
     &-sass {
       width: 75%;
     }
@@ -60,10 +64,6 @@
 
     &-chinese {
       width: 100%;
-    }
-
-    &-english {
-      width: 80%;
     }
   }
 }
