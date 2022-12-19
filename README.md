@@ -5,7 +5,10 @@
     個人簡介的網站demo，使用React、TypeScript、Sass編寫，且為RWD響應式網頁，能用電腦、手機、平板等螢幕大小瀏覽。
     內容主要為，關於我的簡介、專長、教育程度、工作經歷、以及透過email或電話'聯絡我'之功能等等。
 
-    網站已部屬至Github pages上，請至 https://yuanshikai524.github.io/my-portfolio/ 查看。
+
+網站已部屬至Github pages上，請至下列網址查看：
+
+    https://yuanshikai524.github.io/my-portfolio/
 
 文件結構：
 
