@@ -38,7 +38,11 @@ const Brief = ({ resource }: Resource) => {
                   })
                 }
               </svg>
-              <span>{cateObj.content}</span>
+              {
+                category === 'mail' ? <span><a href='mailto:gcobc04992@gmail.com'>{cateObj.content}</a></span> :
+                category === 'phone' ? <span><a href='tel:0916-090-156'>{cateObj.content}</a></span> :
+                <span>{cateObj.content}</span>
+              }
             </li>
           )
         })

@@ -39,4 +39,11 @@
 .brief-container {
   @include border-bottom;
   padding-bottom: 15px;
+  
+  a {
+    color: #757575;
+  }
+  a:hover {
+    opacity: 0.7; 
+  }
 }
