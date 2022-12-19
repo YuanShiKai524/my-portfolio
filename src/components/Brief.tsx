@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import { MyResponse } from '../helpers/FetchData'
+import Error from './Error'
 
 export type Resource = {
   resource: {
@@ -16,7 +17,7 @@ const Brief = ({ resource }: Resource) => {
   return (
     <ul>
       {
-        allData.name === "AxiosError" ? <h1 style={{ color: "red" }}>{allData.message}</h1> :
+        allData.name === "AxiosError" ? <Error /> :
         Object.keys(allData.brief).map((category) => {
           const cateObj = allData.brief[category];
           let fillRule: "inherit" | "nonzero" | "evenodd" | undefined = undefined;

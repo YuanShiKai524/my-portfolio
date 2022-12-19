@@ -1,4 +1,5 @@
 import { Resource } from '../components/Brief'
+import Error from './Error'
 
 const Experiences = ({ resource }: Resource) => {
 
@@ -7,7 +8,7 @@ const Experiences = ({ resource }: Resource) => {
   return (
     <div>
       {
-        allData.name === 'AxiosError' ? <h1 style={{ color: "red" }}>{allData.message}</h1> : // 若返回的數據是error的話
+        allData.name === 'AxiosError' ? <Error classString=' section-container errorExperiences' /> : // 若返回的數據是error的話
           <>
             {
               Object.keys(allData).map((category) => {

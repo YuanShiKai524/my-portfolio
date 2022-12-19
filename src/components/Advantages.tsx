@@ -1,6 +1,7 @@
 import { Fragment, memo } from 'react'
 import { Resource } from "./Brief"
 import { MyResponse, IAdvantages } from '../helpers/FetchData'
+import Error from './Error'
 
 const Advantages = ({ resource }: Resource) => {
 
@@ -9,7 +10,7 @@ const Advantages = ({ resource }: Resource) => {
   return (
     <>
       {
-        allData.name === "AxiosError" ? <h1 style={{ color: "red" }}>{allData.message}</h1> :
+        allData.name === "AxiosError" ? <Error classString='errorAdvantages' /> :
         Object.keys(allData.advantages).map((category) => {
           const cateObjs = allData.advantages as IAdvantages
           const {title, items} = cateObjs[category]
