@@ -22,7 +22,7 @@ const LeftColumn = () => {
   const styleProp: CssProp = { minHeight: winWidth < 641 ? `${winWidth * 0.75 - 8}px` : `${winWidth * 0.3333 * 0.75 - 8}px` };
 
   // 請求數據後的結果
-  const [resource] = useState<Result>( useMemo(() => FetchData('/data/leftData.json'), []) )
+  const [resource] = useState<Result>( useMemo(() => FetchData('/my-portfolio/data/leftData.json'), []) )
 
   // 此函數用於更新winWidth的值(若innerWidth有變動)
   const updateWinWidth = (): void => {
@@ -45,7 +45,7 @@ const LeftColumn = () => {
   return (
     <div className='col-4 col left-col shadow'>
       <div className="portrait-container" style={styleProp}>
-        <img src='/images/portrait.jpg' alt="portrait" />
+        <img src='/my-portfolio/images/portrait.jpg' alt="portrait" />
         <span className="my-name">Jeff Chen</span>
       </div>
       <div className="container">

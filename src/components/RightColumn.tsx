@@ -5,7 +5,7 @@ import Experiences from "./Experiences"
 
 const RightColumn = () => {
 
-  const resource = FetchData("/data/rightData.json");
+  const resource = FetchData("/my-portfolio/data/rightData.json");
 
   return (
     <div className="col-8 col">
